@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 import HeroBanner from "../../app/asset/HeroBanner.json";
 import HeroBanner2 from "../../app/asset/HeroBanner2.json";
 const Hero = () => {
@@ -35,6 +36,7 @@ const Hero = () => {
               width={`100%`}
               isClickToPauseDisabled={true}
             /> */}
+            <LottieAnimation animationData={HeroBanner} />
           </div>
 
           <div className="relative -mt-[200px] lg:-mt-[70px]">
@@ -45,6 +47,7 @@ const Hero = () => {
                 width={400}
                 isClickToPauseDisabled={true}
               /> */}
+              <LottieAnimation animationData={HeroBanner2} />
             </div>
             <div className="w-full px-4 py-9 relative bg-opacity-80 bg-white">
               <div className="mx-auto max-w-[800px] text-center">
