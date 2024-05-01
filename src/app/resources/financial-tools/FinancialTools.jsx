@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../../components/Common/LottieAnimation";
 import emi from "../../asset/emi.json";
 import sip from "../../asset/sip.json";
 import SectionTitle from "../../../components/Common/SectionTitle";
@@ -48,6 +49,7 @@ const FinancialTools = () => {
                       width={`100px`}
                       isClickToPauseDisabled={true}
                     /> */}
+                    <LottieAnimation animationData={sip} />
                   </div>
                 </div>
               </Link>
@@ -70,6 +72,7 @@ const FinancialTools = () => {
                       width={`100px`}
                       isClickToPauseDisabled={true}
                     /> */}
+                    <LottieAnimation animationData={emi} />
                   </div>
                 </div>
               </Link>

@@ -1,9 +1,10 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import SectionTitle from "../../../components/Common/SectionTitle";
+import LottieAnimation from "../../../components/Common/LottieAnimation";
 // import lottie from "lottie-web";
 // import Lottie from "react-lottie";
-// import school from "../../asset/school.json";
+import school from "../../asset/school.json";
 export const metadata = {
   title: "School Chapters Page | Calcya",
   description: "This is School Chapters Page Calcya",
@@ -56,6 +57,7 @@ const SchoolChapters = () => {
             isClickToPauseDisabled={true}
           /> */}
           {/* <div ref={container} className="h-[500px] w-[500px]" /> */}
+          <LottieAnimation animationData={school} />
         </div>
         {/* cards */}
         <div className="mx-3">

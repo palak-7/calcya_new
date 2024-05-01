@@ -2,6 +2,7 @@
 
 import React from "react";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 import emi from "../../app/asset/emi.json";
 import glossary from "../../app/asset/glosary.json";
 import insights from "../../app/asset/insights.json";
@@ -65,6 +66,7 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
+                  <LottieAnimation animationData={emi} />
                 </div>
               </div>
             </Link>
@@ -81,6 +83,7 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
+                  <LottieAnimation animationData={glossary} />
                 </div>
               </div>
             </Link>
@@ -97,6 +100,7 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
+                  <LottieAnimation animationData={insights} />
                 </div>
               </div>
             </Link>

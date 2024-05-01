@@ -2,6 +2,7 @@
 
 import SectionTitle from "../../components/Common/SectionTitle";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 import event from "../../app/asset/event.json";
 export const metadata = {
   title: "Events Page | Calcya",
@@ -40,6 +41,7 @@ const Events = () => {
             width={`300px`}
             isClickToPauseDisabled={true}
           /> */}
+          <LottieAnimation animationData={event} />
         </div>
         {/* cards */}
         <div className="mx-3 lg:w-1/2">

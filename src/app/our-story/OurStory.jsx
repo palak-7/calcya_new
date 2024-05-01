@@ -1,6 +1,7 @@
 "use client";
 import SectionTitle from "../../components/Common/SectionTitle";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 import ourStory from "../asset/our-story.json";
 import Timeline from "./Timeline";
 import SecondTimeline from "./SecondTimeline";
@@ -36,6 +37,7 @@ const OurStory = () => {
                 width={`100%`}
                 isClickToPauseDisabled={true}
               /> */}
+              <LottieAnimation animationData={ourStory} />
             </div>
           </div>
         </div>

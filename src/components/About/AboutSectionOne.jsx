@@ -2,6 +2,7 @@
 
 import SectionTitle from "../Common/SectionTitle";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../Common/LottieAnimation";
 import About from "../../app/asset/about-us.json";
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -70,6 +71,7 @@ const AboutSectionOne = () => {
                   width={`100%`}
                   isClickToPauseDisabled={true}
                 /> */}
+                <LottieAnimation animationData={About} />
               </div>
             </div>
           </div>

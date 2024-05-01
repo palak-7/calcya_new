@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../../components/Common/LottieAnimation";
 import emi from "../../../app/asset/emi.json";
 import dispute from "../../../app/asset/dispute.json";
 import SectionTitle from "../../../components/Common/SectionTitle";
@@ -44,6 +45,7 @@ const Glossary = () => {
                     width={`200px`}
                     isClickToPauseDisabled={true}
                   /> */}
+                  <LottieAnimation animationData={emi} />
                 </div>
               </div>
             </Link>
@@ -63,6 +65,7 @@ const Glossary = () => {
                     width={`200px`}
                     isClickToPauseDisabled={true}
                   /> */}
+                  <LottieAnimation animationData={dispute} />
                 </div>
               </div>
             </Link>

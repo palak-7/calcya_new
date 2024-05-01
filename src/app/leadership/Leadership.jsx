@@ -2,6 +2,7 @@
 import SectionTitle from "../../components/Common/SectionTitle";
 // import Lottie from "react-lottie";
 import ourStory from "../asset/our-story.json";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 import Timeline from "./Timeline";
 const Leadership = () => {
   // const defaultOptions = {
@@ -41,6 +42,7 @@ const Leadership = () => {
                 width={`100%`}
                 isClickToPauseDisabled={true}
               /> */}
+              <LottieAnimation animationData={ourStory} />
             </div>
           </div>
           <ol className="-mt-9 mx-4 border-l border-greenNew md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">

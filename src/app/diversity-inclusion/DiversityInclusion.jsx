@@ -1,6 +1,7 @@
 "use client";
 import SectionTitle from "../../components/Common/SectionTitle";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 import ourStory from "../asset/our-story.json";
 import Card from "../../components/Common/Card";
 
@@ -45,6 +46,7 @@ const DiversityInclusion = () => {
                 width={`100%`}
                 isClickToPauseDisabled={true}
               /> */}
+              <LottieAnimation animationData={ourStory} />
             </div>
           </div>
           {/* cards */}

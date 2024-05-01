@@ -2,6 +2,7 @@
 import Image from "next/image";
 import SectionTitle from "../../components/Common/SectionTitle";
 import Card from "../../components/Common/Card";
+import LottieAnimation from "../../components/Common/LottieAnimation";
 // import Lottie from "react-lottie";
 import about from "../asset/about-us.json";
 const OurValues = () => {
@@ -43,6 +44,7 @@ const OurValues = () => {
                   width={`80%`}
                   isClickToPauseDisabled={true}
                 /> */}
+                <LottieAnimation animationData={about} />
               </div>
             </div>
             {/* cards */}

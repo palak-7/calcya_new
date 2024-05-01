@@ -2,6 +2,7 @@
 
 import SectionTitle from "../../../components/Common/SectionTitle";
 // import Lottie from "react-lottie";
+import LottieAnimation from "../../../components/Common/LottieAnimation";
 import university from "../../../app/asset/university.json";
 export const metadata = {
   title: "UniversityChapters Page | Calcya",
@@ -49,6 +50,7 @@ const UniversityChapters = () => {
             width={`500px`}
             isClickToPauseDisabled={true}
           /> */}
+          <LottieAnimation animationData={university} />
         </div>
         {/* cards */}
         <div className="mx-3">
