@@ -1,8 +1,8 @@
 "use client";
 
 import SectionTitle from "../../../components/Common/SectionTitle";
-import Lottie from "react-lottie";
-import school from "../../asset/school.json";
+// import Lottie from "react-lottie";
+// import school from "../../asset/school.json";
 export const metadata = {
   title: "School Chapters Page | Calcya",
   description: "This is School Chapters Page Calcya",
@@ -10,14 +10,14 @@ export const metadata = {
 };
 
 const SchoolChapters = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: school,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: school,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <div className="transform scale-75 w-[133.33%] origin-left -mt-[50px]">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3">
@@ -43,12 +43,12 @@ const SchoolChapters = () => {
               center
             />
           </div>
-          <Lottie
+          {/* <Lottie
             options={defaultOptions}
             height={`500px`}
             width={`500px`}
             isClickToPauseDisabled={true}
-          />
+          /> */}
         </div>
         {/* cards */}
         <div className="mx-3">
