@@ -1,26 +1,26 @@
 "use client";
 
 import Link from "next/link";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import HeroBanner from "../../app/asset/HeroBanner.json";
 import HeroBanner2 from "../../app/asset/HeroBanner2.json";
 const Hero = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: HeroBanner,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions2 = {
-    loop: true,
-    autoplay: true,
-    animationData: HeroBanner2,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: HeroBanner,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptions2 = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: HeroBanner2,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <>
       <section
@@ -29,22 +29,22 @@ const Hero = () => {
       >
         <div className="container lg:flex justify-center">
           <div className="w-full lg:-mt-[180px] relative sm:w-auto">
-            <Lottie
+            {/* <Lottie
               options={defaultOptions}
               height={`100%`}
               width={`100%`}
               isClickToPauseDisabled={true}
-            />
+            /> */}
           </div>
 
           <div className="relative -mt-[200px] lg:-mt-[70px]">
             <div className="absolute inset-0 z-0">
-              <Lottie
+              {/* <Lottie
                 options={defaultOptions2}
                 height={400}
                 width={400}
                 isClickToPauseDisabled={true}
-              />
+              /> */}
             </div>
             <div className="w-full px-4 py-9 relative bg-opacity-80 bg-white">
               <div className="mx-auto max-w-[800px] text-center">

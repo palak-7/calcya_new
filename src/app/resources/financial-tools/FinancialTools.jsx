@@ -1,27 +1,27 @@
 "use client";
 import Link from "next/link";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import emi from "../../asset/emi.json";
 import sip from "../../asset/sip.json";
 import SectionTitle from "../../../components/Common/SectionTitle";
 
 const FinancialTools = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: sip,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions2 = {
-    loop: true,
-    autoplay: true,
-    animationData: emi,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: sip,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptions2 = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: emi,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <section id="about" className="mt-[200px]">
       <div className="container">
@@ -42,12 +42,12 @@ const FinancialTools = () => {
                     accumulate with your SIP
                   </p>
                   <div className="float-end">
-                    <Lottie
+                    {/* <Lottie
                       options={defaultOptions}
                       height={`100px`}
                       width={`100px`}
                       isClickToPauseDisabled={true}
-                    />
+                    /> */}
                   </div>
                 </div>
               </Link>
@@ -64,12 +64,12 @@ const FinancialTools = () => {
                     personal loans.
                   </p>
                   <div className="float-end">
-                    <Lottie
+                    {/* <Lottie
                       options={defaultOptions2}
                       height={`100px`}
                       width={`100px`}
                       isClickToPauseDisabled={true}
-                    />
+                    /> */}
                   </div>
                 </div>
               </Link>

@@ -1,18 +1,17 @@
 "use client";
 import SectionTitle from "../../components/Common/SectionTitle";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import ourStory from "../asset/our-story.json";
-import Card from "../../components/Common/Card";
 import Timeline from "./Timeline";
 const Leadership = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: ourStory,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: ourStory,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <section
       id="about"
@@ -36,12 +35,12 @@ const Leadership = () => {
             </div>
 
             <div className="">
-              <Lottie
+              {/* <Lottie
                 options={defaultOptions}
                 height={`100%`}
                 width={`100%`}
                 isClickToPauseDisabled={true}
-              />
+              /> */}
             </div>
           </div>
           <ol className="-mt-9 mx-4 border-l border-greenNew md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">

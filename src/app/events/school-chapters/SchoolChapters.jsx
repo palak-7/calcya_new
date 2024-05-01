@@ -1,6 +1,7 @@
 "use client";
-
+import React, { useRef, useEffect } from "react";
 import SectionTitle from "../../../components/Common/SectionTitle";
+// import lottie from "lottie-web";
 // import Lottie from "react-lottie";
 // import school from "../../asset/school.json";
 export const metadata = {
@@ -10,14 +11,19 @@ export const metadata = {
 };
 
 const SchoolChapters = () => {
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: school,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
-  // };
+  // const container = useRef(null);
+
+  // useEffect(() => {
+  //   const anim = lottie.loadAnimation({
+  //     container: container.current,
+  //     renderer: "svg",
+  //     loop: true,
+  //     autoplay: true,
+  //     animationData: school,
+  //   });
+
+  //   return () => anim.destroy(); // Cleanup animation on component unmount
+  // }, []);
   return (
     <div className="transform scale-75 w-[133.33%] origin-left -mt-[50px]">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3">
@@ -49,6 +55,7 @@ const SchoolChapters = () => {
             width={`500px`}
             isClickToPauseDisabled={true}
           /> */}
+          {/* <div ref={container} className="h-[500px] w-[500px]" /> */}
         </div>
         {/* cards */}
         <div className="mx-3">

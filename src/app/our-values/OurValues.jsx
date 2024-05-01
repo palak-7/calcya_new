@@ -2,17 +2,17 @@
 import Image from "next/image";
 import SectionTitle from "../../components/Common/SectionTitle";
 import Card from "../../components/Common/Card";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import about from "../asset/about-us.json";
 const OurValues = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: about,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: about,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <section
       id="about"
@@ -37,12 +37,12 @@ const OurValues = () => {
               </div>
 
               <div className="mt-9">
-                <Lottie
+                {/* <Lottie
                   options={defaultOptions}
                   height={`80%`}
                   width={`80%`}
                   isClickToPauseDisabled={true}
-                />
+                /> */}
               </div>
             </div>
             {/* cards */}

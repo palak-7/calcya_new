@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import emi from "../../app/asset/emi.json";
 import glossary from "../../app/asset/glosary.json";
 import insights from "../../app/asset/insights.json";
@@ -12,30 +12,30 @@ export const metadata = {
   // other metadata
 };
 const Resources = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: emi,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions2 = {
-    loop: true,
-    autoplay: true,
-    animationData: glossary,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions3 = {
-    loop: true,
-    autoplay: true,
-    animationData: insights,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: emi,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptions2 = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: glossary,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptions3 = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: insights,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <div className="mt-[40px] transform scale-75 w-[133.33%] origin-left">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3">
@@ -59,12 +59,12 @@ const Resources = () => {
                   <h3 className="font-semibold text-black text-2xl mx-auto text-center mb-3">
                     Financial Tools
                   </h3>
-                  <Lottie
+                  {/* <Lottie
                     options={defaultOptions}
                     height={`140px`}
                     width={`140px`}
                     isClickToPauseDisabled={true}
-                  />
+                  /> */}
                 </div>
               </div>
             </Link>
@@ -75,12 +75,12 @@ const Resources = () => {
                   <h3 className="font-semibold text-black text-2xl mx-auto text-center mb-3">
                     Glossary
                   </h3>
-                  <Lottie
+                  {/* <Lottie
                     options={defaultOptions2}
                     height={`140px`}
                     width={`140px`}
                     isClickToPauseDisabled={true}
-                  />
+                  /> */}
                 </div>
               </div>
             </Link>
@@ -91,12 +91,12 @@ const Resources = () => {
                   <h3 className="font-semibold text-black text-2xl mx-auto text-center mb-3">
                     Insights
                   </h3>
-                  <Lottie
+                  {/* <Lottie
                     options={defaultOptions3}
                     height={`140px`}
                     width={`140px`}
                     isClickToPauseDisabled={true}
-                  />
+                  /> */}
                 </div>
               </div>
             </Link>

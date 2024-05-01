@@ -1,7 +1,7 @@
 "use client";
 
 import SectionTitle from "../../../components/Common/SectionTitle";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import university from "../../../app/asset/university.json";
 export const metadata = {
   title: "UniversityChapters Page | Calcya",
@@ -10,14 +10,14 @@ export const metadata = {
 };
 
 const UniversityChapters = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: university,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: university,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <div className="transform scale-75 w-[133.33%] origin-left -mt-[120px]">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3">
@@ -43,12 +43,12 @@ const UniversityChapters = () => {
               center
             />
           </div>
-          <Lottie
+          {/* <Lottie
             options={defaultOptions}
             height={`500px`}
             width={`500px`}
             isClickToPauseDisabled={true}
-          />
+          /> */}
         </div>
         {/* cards */}
         <div className="mx-3">

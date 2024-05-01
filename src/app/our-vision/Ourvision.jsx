@@ -1,18 +1,18 @@
 "use client";
 import SectionTitle from "../../components/Common/SectionTitle";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import ourStory from "../asset/our-story.json";
 import Card from "../../components/Common/Card";
 
 const Ourvision = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: ourStory,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: ourStory,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <section
       id="about"
@@ -36,12 +36,12 @@ const Ourvision = () => {
             </div>
 
             <div className="">
-              <Lottie
+              {/* <Lottie
                 options={defaultOptions}
                 height={`100%`}
                 width={`100%`}
                 isClickToPauseDisabled={true}
-              />
+              /> */}
             </div>
           </div>
           {/* cards */}

@@ -1,7 +1,7 @@
 "use client";
 
 import SectionTitle from "../../components/Common/SectionTitle";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import event from "../../app/asset/event.json";
 export const metadata = {
   title: "Events Page | Calcya",
@@ -10,14 +10,14 @@ export const metadata = {
 };
 
 const Events = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: event,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: event,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <div className="mt-[40px] transform scale-75 w-[133.33%] origin-left">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3 lg:flex">
@@ -34,12 +34,12 @@ const Events = () => {
             "
             center
           />
-          <Lottie
+          {/* <Lottie
             options={defaultOptions}
             height={`300px`}
             width={`300px`}
             isClickToPauseDisabled={true}
-          />
+          /> */}
         </div>
         {/* cards */}
         <div className="mx-3 lg:w-1/2">

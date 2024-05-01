@@ -1,27 +1,27 @@
 "use client";
 import Link from "next/link";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import emi from "../../../app/asset/emi.json";
 import dispute from "../../../app/asset/dispute.json";
 import SectionTitle from "../../../components/Common/SectionTitle";
 
 const Glossary = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: dispute,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
-  const defaultOptions2 = {
-    loop: true,
-    autoplay: true,
-    animationData: emi,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: dispute,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+  // const defaultOptions2 = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: emi,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <section id="about" className="mt-[200px]">
       <div className="container">
@@ -38,12 +38,12 @@ const Glossary = () => {
                 </h3>
 
                 <div className="float-end">
-                  <Lottie
+                  {/* <Lottie
                     options={defaultOptions2}
                     height={`200px`}
                     width={`200px`}
                     isClickToPauseDisabled={true}
-                  />
+                  /> */}
                 </div>
               </div>
             </Link>
@@ -57,12 +57,12 @@ const Glossary = () => {
                 </h3>
 
                 <div className="float-end">
-                  <Lottie
+                  {/* <Lottie
                     options={defaultOptions}
                     height={`200px`}
                     width={`200px`}
                     isClickToPauseDisabled={true}
-                  />
+                  /> */}
                 </div>
               </div>
             </Link>
