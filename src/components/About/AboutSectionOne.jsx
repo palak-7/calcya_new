@@ -1,7 +1,7 @@
 "use client";
 
 import SectionTitle from "../Common/SectionTitle";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import About from "../../app/asset/about-us.json";
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -18,14 +18,14 @@ const AboutSectionOne = () => {
       {text}
     </p>
   );
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: About,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: About,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
   return (
     <section
       id="about"
@@ -64,12 +64,12 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
-                <Lottie
+                {/* <Lottie
                   options={defaultOptions}
                   height={`100%`}
                   width={`100%`}
                   isClickToPauseDisabled={true}
-                />
+                /> */}
               </div>
             </div>
           </div>
