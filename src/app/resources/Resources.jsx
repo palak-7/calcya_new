@@ -66,7 +66,9 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
-                  <LottieAnimation animationData={emi} />
+                  <div className="w-[140px] h-[140px]">
+                    <LottieAnimation animationData={emi} />
+                  </div>
                 </div>
               </div>
             </Link>
@@ -83,7 +85,9 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
-                  <LottieAnimation animationData={glossary} />
+                  <div className="w-[140px] h-[140px]">
+                    <LottieAnimation animationData={glossary} />
+                  </div>
                 </div>
               </div>
             </Link>
@@ -100,7 +104,9 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
-                  <LottieAnimation animationData={insights} />
+                  <div className="w-[140px] h-[140px]">
+                    <LottieAnimation animationData={insights} />
+                  </div>
                 </div>
               </div>
             </Link>

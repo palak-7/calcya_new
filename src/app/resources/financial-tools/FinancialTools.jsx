@@ -42,7 +42,7 @@ const FinancialTools = () => {
                     Calculate how much you need to save or how much you will
                     accumulate with your SIP
                   </p>
-                  <div className="float-end">
+                  <div className="float-end w-[100px] h-[100px]">
                     {/* <Lottie
                       options={defaultOptions}
                       height={`100px`}
@@ -65,7 +65,7 @@ const FinancialTools = () => {
                     Calculate EMI on your loans - home loan, car loan or
                     personal loans.
                   </p>
-                  <div className="float-end">
+                  <div className="float-end w-[100px] h-[100px]">
                     {/* <Lottie
                       options={defaultOptions2}
                       height={`100px`}

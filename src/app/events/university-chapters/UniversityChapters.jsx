@@ -25,7 +25,7 @@ const UniversityChapters = () => {
         <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
           Calcya University Chapters
         </h2>
-        <div className="mx-3 lg:flex">
+        <div className="mx-3 lg:flex lg:justify-center">
           <div className="">
             <h3 className=" mx-auto text-center font-serif mb-4 text-xl font-bold !leading-tight text-greenNew sm:text-4xl md:text-[30px]">
               College Events

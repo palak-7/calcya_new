@@ -38,7 +38,7 @@ const Glossary = () => {
                   Finance Glossary
                 </h3>
 
-                <div className="float-end">
+                <div className="float-end w-[200px] h-[200px]">
                   {/* <Lottie
                     options={defaultOptions2}
                     height={`200px`}
@@ -58,7 +58,7 @@ const Glossary = () => {
                   Alternative Dispute Resolution Glossary
                 </h3>
 
-                <div className="float-end">
+                <div className="float-end w-[200px] h-[200px]">
                   {/* <Lottie
                     options={defaultOptions}
                     height={`200px`}

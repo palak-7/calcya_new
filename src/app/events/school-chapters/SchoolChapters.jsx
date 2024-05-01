@@ -31,7 +31,7 @@ const SchoolChapters = () => {
         <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
           Calcya School Chapters
         </h2>
-        <div className="mx-3 lg:flex">
+        <div className="mx-3 lg:flex lg:justify-center">
           <div className="">
             <h3 className=" mx-auto text-center font-serif mb-4 text-2xl font-bold !leading-tight text-greenNew sm:text-4xl md:text-[30px]">
               Engaging School Students in Legal Exploration
@@ -57,7 +57,9 @@ const SchoolChapters = () => {
             isClickToPauseDisabled={true}
           /> */}
           {/* <div ref={container} className="h-[500px] w-[500px]" /> */}
-          <LottieAnimation animationData={school} />
+          <div className="h-[500px] w-[500px]">
+            <LottieAnimation animationData={school} />
+          </div>
         </div>
         {/* cards */}
         <div className="mx-3">

@@ -41,7 +41,9 @@ const Events = () => {
             width={`300px`}
             isClickToPauseDisabled={true}
           /> */}
-          <LottieAnimation animationData={event} />
+          <div className="w-[300px] h-[300px]">
+            <LottieAnimation animationData={event} />
+          </div>
         </div>
         {/* cards */}
         <div className="mx-3 lg:w-1/2">

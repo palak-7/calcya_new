@@ -8,13 +8,13 @@ export const metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="mt-[140px]">
+    <div className="mt-[70px] transform scale-75 w-[133.33%] origin-left">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3 lg:flex">
         <div className=" w-1/2">
           <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
             About Calcya
           </h2>
-          <h3 className=" mx-auto text-center font-serif mb-4 text-xl font-bold !leading-tight text-greenNew sm:text-4xl md:text-[30px]">
+          <h3 className="w-3/4 mx-auto text-center font-serif mb-4 text-xl font-bold !leading-tight text-greenNew sm:text-4xl md:text-[30px]">
             The Compliance People: Simplifying Tax Consultation and Compliance
           </h3>
           <SectionTitle

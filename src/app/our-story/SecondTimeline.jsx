@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Timeline() {
   return (
-    <ol className="mt-9 mx-4 border-l border-greenNew md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
+    <ol className="mt-9 mx-10 border-l border-greenNew md:flex md:justify-center md:gap-6 md:border-l-0 md:border-t">
       {/* <!--Third item--> */}
       <li>
         <div className="flex-start flex items-center pt-2 md:block md:pt-0">

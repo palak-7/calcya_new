@@ -40,7 +40,7 @@ const Hero = () => {
           </div>
 
           <div className="relative -mt-[200px] lg:-mt-[70px]">
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 w-[440px] h-[440px]">
               {/* <Lottie
                 options={defaultOptions2}
                 height={400}
