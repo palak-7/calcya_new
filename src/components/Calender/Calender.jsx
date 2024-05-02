@@ -100,7 +100,7 @@ const Calender = () => {
     });
   }
   return (
-    <div className="">
+    <div className="lg:transform lg:scale-95 lg:w-[95%] lg:origin-top-left mx-5 w-full">
       {context?.user?.email === "meenusehgal@gmail.com" ? (
         <Fullcalender
           ref={calendar}

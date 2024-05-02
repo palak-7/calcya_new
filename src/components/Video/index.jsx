@@ -10,7 +10,7 @@ const Video = () => {
 
   return (
     <section className="relative lg:-mt-[5px] mt-9 z-10">
-      <div>
+      <div className="lg:transform lg:scale-75 lg:origin-top-left lg:w-[133.33%]">
         <SectionTitle
           title="Calcya Compliance Calender"
           paragraph=""
