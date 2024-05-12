@@ -2,8 +2,8 @@ const data = [
   {
     id: 1,
     title: "Interest paid on Home Loan (Section 24B)",
-    content:
-      "contributing-towards-national-pension-scheme works! Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, corporis repellat voluptas perferendis quos possimus fuga, iure saepe rem dolore et corrupti. Necessitatibus, nam sequi sed, dolores facilis adipisci fugit consequuntur aliquam ducimus laudantium, beatae voluptate id delectus possimus nesciunt ex ad enim porro natus culpa suscipit vel laborum neque aut? Hic vitae itaque accusantium illum voluptas sunt suscipit provident nemo doloremque quod, reprehenderit repellat expedita consequuntur aut ab eos excepturi et facilis quam doloribus quos saepe nobis aspernatur enim. Velit doloremque dolorem accusantium esse! Nobis ea eligendi, sit quasi architecto eveniet facere in dolor. Aspernatur molestias distinctio vero eligendi.",
+    content: `<p style='margin: 0cm 0cm 10pt; text-align: center; line-height: 150%; font-size: 16px; font-family: "Times New Roman", serif;'><strong><span style="font-size: 22px; line-height: 150%;">Introduction</span></strong></p>
+      <p><span style='font-size: 17px; line-height: 150%; font-family: "Times New Roman", serif;'>Owning a home is a cherished dream for many in India, and with the skyrocketing property prices, securing a home loan has become an everyday necessity. Home loans often come with substantial Equated Monthly Instalments (EMIs), predominantly consisting of interest in the initial years. To alleviate the financial strain on homeowners, the Indian government provides tax relief through Section 24B of the Income-tax Act. This section offers deductions on home loan repayments&rsquo; interest and principal components, helping taxpayers reduce their tax liability while realizing their homeownership goals.</span></p>`,
     image: "/images/saveTaxes/home.svg",
   },
   {
