@@ -16,7 +16,7 @@ export default function Home() {
     <div className=" transform">
       <ScrollUp />
       <Hero />
-      <div className="transform scale-75 origin-top-left w-[133.33%] lg:flex lg:justify-evenly">
+      <div className="lg:flex lg:justify-around">
         <Features />
         <Video />
       </div>
