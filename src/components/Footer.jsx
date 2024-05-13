@@ -10,7 +10,7 @@ import { FaYoutube } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 const Footer = () => {
   return (
-    <div className="transform scale-90 w-[111.11%] origin-left">
+    <div className="lg:transform lg:scale-90 lg:w-[111.11%] lg:origin-left">
       <div className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
