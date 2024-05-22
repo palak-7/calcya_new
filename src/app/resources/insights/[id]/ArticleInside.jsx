@@ -33,7 +33,7 @@ const ArticleInside = ({ id }) => {
       }
     } catch (error) {
       console.error("Error fetching data:", error);
-      setError("Error fetching data");
+      setError(error);
     } finally {
       setLoading(false);
     }
