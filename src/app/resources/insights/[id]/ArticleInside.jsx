@@ -50,7 +50,6 @@ const ArticleInside = ({ id }) => {
   if (error) {
     return <div>{error}</div>;
   }
-
   return (
     <div className="mt-[200px] text-lg lg:mx-40 mx-4">
       {headings.map((item, index) => (

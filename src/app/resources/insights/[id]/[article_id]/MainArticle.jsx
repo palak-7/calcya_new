@@ -74,7 +74,7 @@ const MainArticle = ({ article_id }) => {
 
   if (loading) return <div className="mt-[150px]">Loading...</div>;
   if (error) return <div className="mt-[150px]">{error}</div>;
-
+  console.log(article);
   return (
     <div className="mt-[150px] w-full overflow-x-clip lg:grid grid-cols-4">
       <div className="col-span-3">
