@@ -183,11 +183,8 @@ const SubHeading = ({ article_id, heading_id }) => {
       <div className="mt-4 grid gap-x-2 gap-y-4 lg:grid-cols-3 md:grid-cols-3 grid-cols-1">
         {/* headings */}
         {headings?.map((item) => (
-          <>
-            <div
-              key={item.id}
-              className="border-primary border-4 transform transition duration-300 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4"
-            >
+          <div key={item.id}>
+            <div className="border-primary border-4 transform transition duration-300 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4">
               <button
                 onClick={() => {
                   deleteA(item.id);
@@ -215,7 +212,7 @@ const SubHeading = ({ article_id, heading_id }) => {
                 </h3>
               </div>
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>
