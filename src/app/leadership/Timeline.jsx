@@ -10,9 +10,7 @@ export default function Timeline({ title, content }) {
         </div>
         <div className="ml-4 mt-2 pb-5 md:ml-0">
           <h4 className="mb-1.5 text-xl font-semibold">{title}</h4>
-          <p className="mb-3 text-neutral-700 text-justify text-lg mr-5">
-            {content}
-          </p>
+          <p className="mb-3 text-neutral-700 text-lg mr-5">{content}</p>
         </div>
       </li>
     </>

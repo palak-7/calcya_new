@@ -26,9 +26,9 @@ const SchoolChapters = () => {
   //   return () => anim.destroy(); // Cleanup animation on component unmount
   // }, []);
   return (
-    <div className="transform scale-75 w-[133.33%] origin-left -mt-[50px]">
+    <div className="transform scale-90 w-[111.11%] origin-left mt-[70px]">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3">
-        <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
+        <h2 className="mb-10 mx-auto text-center font-serif text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
           Calcya School Chapters
         </h2>
         <div className="mx-3 lg:flex lg:justify-center">
@@ -62,7 +62,7 @@ const SchoolChapters = () => {
           </div>
         </div>
         {/* cards */}
-        <div className="mx-3">
+        <div className="mx-3 transform scale-90 w-[111.11%] origin-left">
           <h3 className=" mx-auto text-center font-serif mb-4 text-2xl font-bold !leading-tight text-greenNew sm:text-4xl md:text-[30px]">
             Competitions and Activities
           </h3>

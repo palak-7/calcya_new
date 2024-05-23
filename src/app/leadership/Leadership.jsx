@@ -16,12 +16,12 @@ const Leadership = () => {
   return (
     <section
       id="about"
-      className="transform scale-75 w-[133.33%] origin-left pt-16 md:pt-20 lg:pt-28 -mt-[130px]"
+      className="transform scale-90 w-[111.11%] origin-left pt-16 md:pt-20 lg:pt-28 -mt-[40px]"
     >
       <div className="container">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:flex lg:justify-evenly">
-            <div className="mt-9">
+            <div className=" xl:ml-32 mt-9">
               <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
                 Leadership
               </h2>
@@ -35,7 +35,7 @@ const Leadership = () => {
               />
             </div>
 
-            <div className="">
+            <div className="mt-10">
               {/* <Lottie
                 options={defaultOptions}
                 height={`100%`}

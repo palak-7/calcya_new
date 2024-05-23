@@ -17,7 +17,7 @@ const OurValues = () => {
   return (
     <section
       id="about"
-      className="transform scale-75 w-[133.33%] origin-left pt-16 md:pt-20 -mt-[150px]"
+      className="transform scale-90 w-[111.11%] origin-left pt-16 md:pt-20 -mt-[100px]"
     >
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">

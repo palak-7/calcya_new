@@ -20,7 +20,7 @@ const Events = () => {
   //   },
   // };
   return (
-    <div className="mt-[40px] transform scale-75 w-[133.33%] origin-left">
+    <div className="mt-[100px] transform scale-90 w-[111.11%] origin-left">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3 lg:flex">
         <div className="mx-3 lg:w-1/2">
           <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
@@ -41,12 +41,12 @@ const Events = () => {
             width={`300px`}
             isClickToPauseDisabled={true}
           /> */}
-          <div className="w-[300px] h-[300px]">
+          <div className="xl:ml-[230px] w-[300px] h-[300px]">
             <LottieAnimation animationData={event} />
           </div>
         </div>
         {/* cards */}
-        <div className="mx-3 lg:w-1/2">
+        <div className="mx-3 lg:w-1/2 transform scale-90 w-[111.11%]">
           <div className="grid grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-2 lg:grid-cols-2">
             <div className="border-primary border-4 transform transition duration-300 hover:scale-105 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4">
               <div className="wow fadeInUp" data-wow-delay=".15s">
