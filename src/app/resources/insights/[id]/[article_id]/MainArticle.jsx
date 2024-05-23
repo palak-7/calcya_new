@@ -52,7 +52,7 @@ const MainArticle = ({ article_id }) => {
       setLoading(false);
     } catch (error) {
       console.error("Error fetching data:", error);
-      setError("Failed to load data");
+      setError(error);
       setLoading(false);
     }
   }, [article_id]);
@@ -74,7 +74,6 @@ const MainArticle = ({ article_id }) => {
 
   if (loading) return <div className="mt-[150px]">Loading...</div>;
   if (error) return <div className="mt-[150px]">{error}</div>;
-  console.log(article);
   return (
     <div className="mt-[150px] w-full overflow-x-clip lg:grid grid-cols-4">
       <div className="col-span-3">
