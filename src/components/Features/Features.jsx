@@ -7,7 +7,7 @@ const Features = () => {
     <>
       <section
         id="features"
-        className="mx-7 px-4 lg:transform lg:scale-75 origin-top lg:-mt-30 md:pb-20 lg:px-3 pl-2 lg:w-1/2 overflow-x-hidden"
+        className=" z-20 mx-7 px-4 lg:transform lg:scale-75 origin-top lg:-mt-30 md:pb-20 lg:px-3 pl-2 lg:w-1/2 overflow-x-hidden"
       >
         <SectionTitle
           title="How to Save Taxes"

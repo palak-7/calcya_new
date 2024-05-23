@@ -72,7 +72,7 @@ const MainArticle = ({ article_id }) => {
     setCommentSection((prevComments) => [...prevComments, newComment]);
   };
   const fetchArticleById = (id) => {
-    return data.find((article) => article.id === id);
+    return data?.find((article) => article.id === id);
   };
   const article = fetchArticleById(article_id);
   const filteredArticles = data.filter(

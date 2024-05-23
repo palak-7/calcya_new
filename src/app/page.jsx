@@ -16,7 +16,7 @@ export default function Home() {
     <div className=" transform">
       <ScrollUp />
       <Hero />
-      <div className="lg:flex lg:justify-around ">
+      <div className="lg:flex lg:justify-around -mt-[100px] bg-white">
         <Features />
         <Video />
       </div>
