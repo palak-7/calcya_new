@@ -52,7 +52,7 @@ const Articles = () => {
         <h2 className="mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
           Articles
         </h2>
-        {updatedData.map((item) => (
+        {updatedData?.map((item) => (
           <div
             key={item.id}
             className="border-primary mt-3 border-4 transform transition duration-300 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4"
