@@ -69,13 +69,13 @@ const ArticleInside = ({ id }) => {
 
   return (
     <div className="mt-[200px] text-lg lg:mx-40 mx-4">
-      {subheading.map((item, index) => (
+      {subheading?.map((item, index) => (
         <React.Fragment key={item.id}>
           <div>
             {index + 1}. {item.heading_id}
           </div>
           <div>
-            {filteredArticles.map((i) => (
+            {filteredArticles?.map((i) => (
               <div key={i.id} className="hover:text-primary">
                 &emsp;&emsp;
                 <Link href={`/resources/insights/${id}/${i.id}`}>

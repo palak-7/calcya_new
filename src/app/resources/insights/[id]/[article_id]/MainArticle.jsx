@@ -140,7 +140,7 @@ const MainArticle = ({ article_id }) => {
         <h1 className="text-center font-semibold text-xl my-2 text-primary font-serif">
           Practice Area Insights
         </h1>
-        {filteredArticles.map((item) => (
+        {filteredArticles?.map((item) => (
           <div
             key={item.id}
             className="transform transition duration-300 ml-2 mr-2 rounded-lg"
