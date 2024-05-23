@@ -30,7 +30,7 @@ const AboutSectionOne = () => {
   return (
     <section
       id="about"
-      className="transform scale-75 width-[133.33%] origin-top lg:-mt-[350px] "
+      className="transform scale-75 width-[133.33%] origin-top lg:-mt-[500px] bg-white"
     >
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 md:pb-10 lg:pb-18">

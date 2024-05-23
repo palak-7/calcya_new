@@ -58,7 +58,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`p-3 transform scale-75 w-[133.33%] origin-top-left header left-0 top-0 z-40 flex items-center ${
+        className={`p-3 transform scale-90 w-[111.11%] origin-top-left header left-0 top-0 z-40 flex items-center ${
           sticky
             ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
             : "absolute bg-transparent"
