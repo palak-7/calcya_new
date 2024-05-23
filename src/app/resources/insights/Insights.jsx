@@ -5,7 +5,7 @@ import Articles from "./Articles";
 const Insights = () => {
   const [openTab, setOpenTab] = useState(1);
   return (
-    <div className="mt-[100px] mx-16">
+    <div className="mt-[150px] mx-16">
       <div className="flex flex-wrap transform w-[133.33%] scale-75 origin-left">
         <div className="w-full">
           <ul

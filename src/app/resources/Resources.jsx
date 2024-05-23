@@ -38,7 +38,7 @@ const Resources = () => {
   //   },
   // };
   return (
-    <div className="mt-[40px] transform scale-75 w-[133.33%] origin-left">
+    <div className="mt-[80px] transform scale-90 w-[111.11%] origin-left">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3">
         <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
           Resources
@@ -66,7 +66,7 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
-                  <div className="w-[140px] h-[140px]">
+                  <div className="w-[140px] h-[140px] container">
                     <LottieAnimation animationData={emi} />
                   </div>
                 </div>
@@ -85,7 +85,7 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
-                  <div className="w-[140px] h-[140px]">
+                  <div className="w-[140px] h-[140px] container">
                     <LottieAnimation animationData={glossary} />
                   </div>
                 </div>
@@ -104,7 +104,7 @@ const Resources = () => {
                     width={`140px`}
                     isClickToPauseDisabled={true}
                   /> */}
-                  <div className="w-[140px] h-[140px]">
+                  <div className="w-[140px] h-[140px] container">
                     <LottieAnimation animationData={insights} />
                   </div>
                 </div>

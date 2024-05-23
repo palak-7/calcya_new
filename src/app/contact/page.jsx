@@ -15,7 +15,7 @@ export const metadata = {
 const ContactPage = () => {
   return (
     <div className="lg:mt-[200px] overflow-x-clip">
-      <div className="mx-3 transform w-[133.33%] scale-75 origin-top-left">
+      <div className="mx-3 transform w-[111.11%] scale-90 origin-top-left">
         <SectionTitle
           title={"Get In Touch With Calcya"}
           paragraph={
@@ -114,7 +114,7 @@ const ContactPage = () => {
           </div>
         </div>
         {/* last message */}
-        <div className="my-16 mx-3 transform w-[133.33%] scale-75 origin-left">
+        <div className="my-16 mx-3 transform w-[111.11%] scale-90 origin-left">
           <SectionTitle
             title={"Your Message Counts"}
             paragraph={
