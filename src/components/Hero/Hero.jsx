@@ -28,7 +28,7 @@ const Hero = () => {
         id="home"
         className="origin-left relative z-10 overflow-hidden bg-white pt-[70px] md:pt-[70px]"
       >
-        <div className="container lg:flex justify-center transfrom scale-75 w-[133.33%]">
+        <div className="container lg:flex justify-center transfrom scale-75 w-[133.33%] mt-[100px]">
           <div className="w-full lg:-mt-[180px] relative sm:w-auto">
             {/* <Lottie
               options={defaultOptions}
