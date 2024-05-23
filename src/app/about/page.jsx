@@ -8,9 +8,9 @@ export const metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="mt-[70px] transform scale-75 w-[133.33%] origin-left">
+    <div className="mt-[130px] transform scale-75 w-[133.33%] origin-left overflow-x-clip">
       <section id="features" className="lg:-mt-30 md:pb-20 lg:px-3 lg:flex">
-        <div className=" w-1/2">
+        <div className=" w-1/2 transform scale-110">
           <h2 className=" mx-auto text-center font-serif mb-4 text-3xl font-bold !leading-tight text-black sm:text-4xl md:text-[45px]">
             About Calcya
           </h2>
@@ -33,10 +33,10 @@ const AboutPage = () => {
           <div className="grid grid-cols-1 gap-x-2 gap-y-4 md:grid-cols-2 lg:grid-cols-2">
             <div className="border-primary border-4 transform transition duration-300 hover:scale-105 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4">
               <div className="wow fadeInUp" data-wow-delay=".15s">
-                <h3 className="font-semibold text-black text-lg mx-auto text-center mb-3">
+                <h3 className="font-semibold text-black text-xl mx-auto text-center mb-3">
                   Expertise
                 </h3>
-                <p>
+                <p className="text-lg">
                   Our team possesses extensive expertise in tax laws and
                   regulations. With up-to-date knowledge of the latest changes,
                   we provide comprehensive and accurate advice tailored to your
@@ -49,7 +49,7 @@ const AboutPage = () => {
                 <h3 className="font-semibold text-black text-lg mx-auto text-center mb-3">
                   Client-Centric Approach
                 </h3>
-                <p>
+                <p className="text-lg">
                   We prioritise your interests and goals. By understanding your
                   unique circumstances, we deliver personalised solutions that
                   optimise tax benefits while ensuring compliance.
@@ -61,7 +61,7 @@ const AboutPage = () => {
                 <h3 className="font-semibold text-black text-lg mx-auto text-center mb-3">
                   Efficiency and Timeliness
                 </h3>
-                <p>
+                <p className="text-lg">
                   Recognising the value of your time, we provide efficient and
                   prompt service. Our streamlined processes and dedicated
                   professionals ensure accurate, on-time tax filings.
@@ -73,7 +73,7 @@ const AboutPage = () => {
                 <h3 className="font-semibold text-black text-lg mx-auto text-center mb-3">
                   Commitment to Compliance
                 </h3>
-                <p>
+                <p className="text-lg">
                   We uphold the highest standards as the compliance people.
                   Guiding you through tax regulations, we help you fulfil
                   obligations while mitigating risks.
@@ -86,7 +86,7 @@ const AboutPage = () => {
               <h3 className="font-semibold text-black text-lg mx-auto text-center mb-3">
                 End-to-End Solutions
               </h3>
-              <p>
+              <p className="text-lg">
                 From consultation to tax filing, our comprehensive services
                 cater to individual taxpayers and businesses alike. Whatever
                 your requirements, we have the expertise and resources to assist
