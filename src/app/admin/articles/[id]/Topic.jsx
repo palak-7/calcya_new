@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import {
-  getHeading,
+  getAllSubHeadings,
   addHeading,
   deleteHeading,
 } from "../../../../services/articles";
@@ -19,8 +19,15 @@ const Topic = ({ article_id }) => {
   });
 
   const fetchHeadings = async () => {
-    const response = await getHeading(article_id);
-    setHeadings(response.data.result);
+    const response = await getAllSubHeadings();
+    const name = replaceHyphensWithSpaces(article_id);
+    const filteredArticles = response.data.result.filter(
+      (article) => article.article_id === name
+    );
+    setHeadings(filteredArticles);
+  };
+  const replaceHyphensWithSpaces = (str) => {
+    return str.replace(/-/g, " ");
   };
 
   const handleSubmit = async (e) => {

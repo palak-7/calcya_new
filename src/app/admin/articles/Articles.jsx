@@ -5,9 +5,9 @@ import UserContext from "../../../context/UserContext";
 import { useContext } from "react";
 import { useRouter } from "next/navigation";
 import {
-  addArticle,
-  getArticle,
-  deleteArticle,
+  addSubHeading,
+  getAllSubHeadings,
+  deleteSubHeading,
 } from "../../../services/articles";
 import { Input } from "@material-tailwind/react";
 import { toast } from "react-toastify";
@@ -15,7 +15,7 @@ import Link from "next/link";
 import { MdCancel } from "react-icons/md";
 import Swal from "sweetalert2";
 
-const Articles = () => {
+const Articles = ({ mail }) => {
   const [articles, setArticles] = useState([]);
   const [formData, setFormData] = useState({
     title: "",
@@ -23,13 +23,27 @@ const Articles = () => {
   const router = useRouter();
   const context = useContext(UserContext);
   const fetchArticles = async () => {
-    const response = await getArticle();
-    setArticles(response.data.result);
+    const response = await getAllSubHeadings();
+    const data = uniqueArray(response.data.result);
+    console.log(data);
+    setArticles(data);
   };
-
+  const replaceSpacesWithHyphens = (str) => {
+    return str.replace(/ /g, "-");
+  };
+  const uniqueArray = (arr) => {
+    const seen = new Map();
+    return arr?.filter((item) => {
+      if (!seen.has(item.heading_id)) {
+        seen.set(item.heading_id, true);
+        return true;
+      }
+      return false;
+    });
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await addArticle(formData);
+    const response = await addSubHeading(formData);
     if (response.data.status) {
       toast.success(response.data.message, {
         position: "bottom-left",
@@ -42,7 +56,7 @@ const Articles = () => {
     }
   };
   useEffect(() => {
-    if (context?.user?.email !== "meenusehgal@gmail.com") {
+    if (context?.user?.email !== mail) {
       router.push("/");
     }
     fetchArticles();
@@ -62,7 +76,7 @@ const Articles = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const result = await deleteArticle(id);
+          const result = await deleteSubHeading(id);
           const newArticles = articles.filter((item) => item.id != id);
           setArticles(newArticles);
           Swal.fire({
@@ -117,10 +131,14 @@ const Articles = () => {
                 >
                   <MdCancel className="float-right hover:scale-150" />
                 </button>
-                <Link href={`/admin/articles/${item.id}`}>
+                <Link
+                  href={`/admin/articles/${replaceSpacesWithHyphens(
+                    item.article_id
+                  )}`}
+                >
                   <div className="wow fadeInUp" data-wow-delay=".15s">
                     <h3 className="font-semibold text-black text-2xl mx-auto text-center items-center">
-                      {item.name}
+                      {item.article_id}
                     </h3>
                   </div>
                 </Link>
