@@ -60,6 +60,7 @@ const Calender = () => {
           });
         }
         setAdminEvents(calendarApi.getEvents());
+        console.log(calendarApi.getEvents());
       },
     });
   }
