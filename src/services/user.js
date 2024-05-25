@@ -32,7 +32,7 @@ export async function forgotPassword(data) {
 
 export async function currentUser(data) {
   const result = await httpAxios
-    .post("/api/currentUser", { data })
+    .get("/api/currentUser", { data })
     .then((response) => response.data);
   return result;
 }

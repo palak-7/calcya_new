@@ -7,7 +7,6 @@ import { currentUser } from "../services/user";
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(undefined);
   useEffect(() => {
-    console.log("Starting....");
     async function load() {
       try {
         const authToken = localStorage.getItem("authToken");

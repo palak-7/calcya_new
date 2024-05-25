@@ -17,23 +17,33 @@ const Topic = ({ article_id }) => {
   const [formData, setFormData] = useState({
     title: "",
   });
-
-  const fetchHeadings = async () => {
-    const response = await getAllSubHeadings();
-    const name = replaceHyphensWithSpaces(article_id);
-    const filteredArticles = response.data.result.filter(
-      (article) => article.article_id === name
-    );
-    setHeadings(filteredArticles);
+  const uniqueArray = (arr) => {
+    const seen = new Map();
+    return arr?.filter((item) => {
+      if (!seen.has(item.heading_id)) {
+        seen.set(item.heading_id, true);
+        return true;
+      }
+      return false;
+    });
   };
   const replaceHyphensWithSpaces = (str) => {
     return str.replace(/-/g, " ");
+  };
+  const name = replaceHyphensWithSpaces(article_id);
+  const fetchHeadings = async () => {
+    const response = await getAllSubHeadings();
+
+    const filteredArticles = response.data.result.filter(
+      (article) => article.article_id === name
+    );
+    setHeadings(uniqueArray(filteredArticles));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const title = formData.title;
-    const response = await addHeading({ article_id, title });
+    const response = await addHeading({ name, title });
     if (response.data.status) {
       toast.success(response.data.message, {
         position: "bottom-left",
@@ -117,7 +127,7 @@ const Topic = ({ article_id }) => {
               <Link href={`/admin/articles/${item.article_id}/${item.id}`}>
                 <div className="wow fadeInUp" data-wow-delay=".15s">
                   <h3 className="font-semibold text-black text-2xl mx-auto text-center items-center">
-                    {item.name}
+                    {item.heading_id}
                   </h3>
                 </div>
               </Link>

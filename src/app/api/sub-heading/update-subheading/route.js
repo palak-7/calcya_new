@@ -1,15 +1,13 @@
 import { NextResponse } from "next/server";
 import pool from "../../../../helper/db";
 
-export async function POST(request) {
-  const { formData, value, startDate, id, rtime } = await request.json();
-  const db = await pool.getConnection();
+export async function PUT(request) {
+  const { formData, value, startDate, artId, rtime } = await request.json();
   try {
-    //create unique id
-    const response = await db.execute(
-      "INSERT INTO sub_headings (id, article_id, heading_id, name, content, author, reading_time, date) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+    const db = await pool.getConnection();
+    const [rows] = await db.execute(
+      "UPDATE sub_headings SET article_id = ?, heading_id = ?, name = ?, content = ?, author = ?, reading_time = ?, date = ? WHERE id = ?",
       [
-        id,
         formData.heading,
         formData.subHeading,
         formData.title,
@@ -17,17 +15,17 @@ export async function POST(request) {
         formData.author,
         rtime,
         startDate,
+        artId,
       ]
     );
-
     return NextResponse.json({
-      message: "Article Added",
+      message: "Article updated",
       status: true,
     });
   } catch (error) {
     console.log(error.message);
     return NextResponse.json({
-      message: "Unable to add article",
+      message: "Can't update article",
       status: false,
     });
   }

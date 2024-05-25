@@ -20,9 +20,9 @@ const SigninPage = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    ("use server");
+    // ("use server");
     const response = await login(formData);
-    localStorage.setItem("authToken", response.data.token);
+    // localStorage.setItem("authToken", response.data.token);
     if (response.data.success) {
       toast.success(response.data.message, {
         position: "bottom-left",

@@ -6,9 +6,13 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import UserContext from "../../context/UserContext";
 import menuData from "./menuData";
+import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
+import { logout } from "../../services/user";
 const Header = () => {
+  const router = useRouter();
   const context = useContext(UserContext);
+  // console.log(context);
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -46,13 +50,12 @@ const Header = () => {
   }
   const doLogout = async () => {
     try {
-      ("use server");
-      localStorage.removeItem("authToken");
-      // await logout();
+      await logout();
       context.setUser(undefined);
+      router.push("/signin");
     } catch (error) {
       console.log(error);
-      toast.error("Logout error");
+      toast.error("Logout error", { position: "bottom-center" });
     }
   };
   return (

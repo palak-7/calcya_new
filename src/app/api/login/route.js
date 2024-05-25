@@ -44,7 +44,10 @@ export async function POST(request) {
       token: token,
       user: user,
     });
-
+    response.cookies.set("authToken", token, {
+      expiresIn: "1d",
+      httpOnly: true,
+    });
     return response;
   } catch (error) {
     return NextResponse.json(
