@@ -15,9 +15,12 @@ import { Input } from "@material-tailwind/react";
 import { toast } from "react-toastify";
 import { MdCancel } from "react-icons/md";
 import Swal from "sweetalert2";
-import JoditEditor from "jodit-react";
+import dynamic from "next/dynamic";
 
-import DatePicker from "react-datepicker";
+// Dynamic imports for components that should only be loaded on the client side
+const JoditEditor = dynamic(() => import("jodit-react"), { ssr: false });
+const DatePicker = dynamic(() => import("react-datepicker"), { ssr: false });
+
 import "react-datepicker/dist/react-datepicker.css";
 
 const Articles = ({ mail }) => {
@@ -40,9 +43,11 @@ const Articles = ({ mail }) => {
     const response = await getAllSubHeadings();
     setArticles(response.data.result);
   };
+
   const replaceSpacesWithHyphens = (str) => {
     return str.replace(/ /g, "-");
   };
+
   const uniqueArray = (arr) => {
     const seen = new Map();
     return arr?.filter((item) => {
@@ -54,12 +59,14 @@ const Articles = ({ mail }) => {
     });
   };
 
-  //calculate reading time
+  // Calculate reading time
   const averageReadingSpeed = 200;
+
   function countWords(text) {
     const wordCount = text.trim().split(/\s+/).length;
     return wordCount;
   }
+
   function calculateReadingTime(text) {
     const words = countWords(text);
     const readingTimeMinutes = words / averageReadingSpeed;
@@ -72,7 +79,6 @@ const Articles = ({ mail }) => {
     const rtime = calculateReadingTime(value);
     if (action == "add") {
       const id = uuid();
-      console.log;
       const response = await addSubHeading({
         formData,
         value,
@@ -111,15 +117,18 @@ const Articles = ({ mail }) => {
       }
     }
   };
+
   useEffect(() => {
     if (context?.user?.email !== mail) {
       router.push("/");
     }
     fetchArticles();
   }, []);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   async function deleteA(id) {
     Swal.fire({
       title: "Are you sure?",
@@ -150,6 +159,7 @@ const Articles = ({ mail }) => {
       }
     });
   }
+
   const config = useMemo(
     () => ({
       readonly: false,
@@ -159,9 +169,9 @@ const Articles = ({ mail }) => {
         },
       },
     }),
-
     []
   );
+
   const handleClick = (id) => {
     const result = articles.find((obj) => obj.id === id);
     setFormData({
@@ -171,9 +181,10 @@ const Articles = ({ mail }) => {
       author: result.author,
     });
     setValue(result.content);
-    setStartDate(result.date);
+    setStartDate(new Date(result.date)); // Ensure date is a Date object
     setArtid(result.id);
   };
+
   return (
     <div>
       <div className="mt-[150px]">
@@ -244,41 +255,38 @@ const Articles = ({ mail }) => {
                   type="submit"
                   className="bg-primary p-2 text-center text-white rounded-lg hover:cursor-pointer"
                 >
-                  update
+                  Update
                 </button>
               </div>
             </form>
           </div>
         </div>
         <div className="mt-4 grid gap-x-2 gap-y-4 lg:grid-cols-3 md:grid-cols-3 grid-cols-1">
-          {/* financial tools */}
           {articles?.map((item) => (
-            <>
-              <div
-                key={item.id}
-                className="border-primary border-4 transform transition duration-300 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4"
+            <div
+              key={item.id}
+              className="border-primary border-4 transform transition duration-300 hover:shadow-xl shadow-md ml-2 mr-2 rounded-lg p-4"
+            >
+              <button
+                onClick={() => {
+                  deleteA(item.id);
+                }}
               >
-                <button
-                  onClick={() => {
-                    deleteA(item.id);
-                  }}
-                >
-                  <MdCancel className="float-right hover:scale-150" />
-                </button>
-                <button
-                  className="hover:cursor-pointer"
-                  onClick={() => {
-                    handleClick(item.id);
-                  }}
-                >
-                  <div className="wow fadeInUp" data-wow-delay=".15s">
-                    <h3 className="font-semibold text-black text-2xl mx-auto text-center items-center">
-                      {item.name}
-                    </h3>
-                  </div>
-                </button>
-              </div>
-            </>
+                <MdCancel className="float-right hover:scale-150" />
+              </button>
+              <button
+                className="hover:cursor-pointer"
+                onClick={() => {
+                  handleClick(item.id);
+                }}
+              >
+                <div className="wow fadeInUp" data-wow-delay=".15s">
+                  <h3 className="font-semibold text-black text-2xl mx-auto text-center items-center">
+                    {item.name}
+                  </h3>
+                </div>
+              </button>
+            </div>
           ))}
         </div>
       </div>
