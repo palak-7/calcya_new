@@ -40,7 +40,7 @@ const Calendar = () => {
 
   useEffect(() => {
     setEvents();
-  }, [setEvents]);
+  }, []);
 
   // Admin can add event
   function handleDateSelect(selectInfo) {
