@@ -100,6 +100,7 @@ const Calendar = () => {
 
   const addAllEvents = async () => {
     const email = context.user.email;
+    console.log(adminEvents);
     const response = await addEvents({ adminEvents, email });
     if (response.success) {
       toast.success("Events Added!", {
