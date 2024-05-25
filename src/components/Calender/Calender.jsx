@@ -25,15 +25,14 @@ const Calendar = () => {
   const calendar = useRef(null);
 
   const setEvents = async () => {
-    if (context?.user) {
-      const result = await getEvents();
-      if (result.success) {
-        try {
-          const adminEventsArray = JSON.parse(result.adminEvents);
-          setAdminEvents(adminEventsArray);
-        } catch (error) {
-          console.error("Error parsing adminEvents:", error);
-        }
+    const result = await getEvents();
+    console.log(result);
+    if (result.success) {
+      try {
+        const adminEventsArray = JSON.parse(result.adminEvents);
+        setAdminEvents(adminEventsArray);
+      } catch (error) {
+        console.error("Error parsing adminEvents:", error);
       }
     }
   };
