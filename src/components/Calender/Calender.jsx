@@ -19,6 +19,7 @@ const Calendar = () => {
   const [loadedContent, setLoadedContent] = useState([]);
   const [adminEvents, setAdminEvents] = useState([]);
   const context = useContext(UserContext);
+
   const [inputValue, setInputValue] = useState("");
 
   const calendar = useRef(null);
@@ -39,7 +40,7 @@ const Calendar = () => {
 
   useEffect(() => {
     setEvents();
-  }, []);
+  }, [setEvents]);
 
   // Admin can add event
   function handleDateSelect(selectInfo) {
