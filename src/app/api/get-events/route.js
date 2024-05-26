@@ -13,7 +13,6 @@ export async function GET() {
       success: true,
       adminEvents: adminResult[0].events,
     });
-    await response.revalidate("/");
     return response;
   } catch (error) {
     console.log(error.message);

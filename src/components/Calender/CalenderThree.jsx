@@ -23,6 +23,7 @@ const CalenderThree = ({ id }) => {
       }
     };
     fetchEvents();
+    console.log(events);
   }, []);
   const context = useContext(UserContext);
 
