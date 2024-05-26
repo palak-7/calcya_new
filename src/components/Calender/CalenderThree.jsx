@@ -16,6 +16,7 @@ const CalenderThree = ({ id }) => {
   useEffect(() => {
     const fetchEvents = async () => {
       const response = await getEvents();
+      console.log(response);
       if (JSON.parse(response.adminEvents).length == 0) {
         setEvents([]);
       } else {
@@ -23,7 +24,6 @@ const CalenderThree = ({ id }) => {
       }
     };
     fetchEvents();
-    console.log(events);
   }, []);
   const context = useContext(UserContext);
 
