@@ -1,0 +1,5 @@
+/* components/MyCalendar.css */
+.custom-calendar .react-calendar__tile {
+    margin: 2px;
+    /* Adjust margin as needed */
+}

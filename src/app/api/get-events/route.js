@@ -8,12 +8,12 @@ export async function GET() {
       "SELECT * from user WHERE email = ?",
       [process.env.ADMIN_EMAIL]
     );
-    console.log(adminResult);
-    return NextResponse.json({
+    const response = NextResponse.json({
       message: "successful",
       success: true,
       adminEvents: adminResult[0].events,
     });
+    return response;
   } catch (error) {
     console.log(error.message);
     return NextResponse.json({ message: "error", success: false });
