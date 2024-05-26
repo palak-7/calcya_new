@@ -23,7 +23,7 @@ const CalenderThree = ({ id }) => {
   };
   useEffect(() => {
     fetchEvents();
-  }, [fetchEvents()]);
+  }, [fetchEvents]);
   const context = useContext(UserContext);
 
   const handleClickDay = async (value) => {
