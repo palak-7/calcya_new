@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import pool from "../../../helper/db";
+export const dynamic = "force-dynamic";
 
-export const revalidate = 1; //revalidate api every 1 second
+// export const revalidate = 1; //revalidate api every 1 second
 export async function GET() {
   try {
     const db = await pool.getConnection();
