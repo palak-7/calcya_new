@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2024 at 05:51 PM
+-- Generation Time: May 26, 2024 at 06:45 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -153,7 +153,7 @@ INSERT INTO `user` (`id`, `name`, `email`, `password`, `events`) VALUES
 ('74fe9dd2-31bd-4a4d-bdbb-be90ff125089', 'new', 'new@gmail.com', '$2a$09$sGPHyUnHcQCgDJVtAP3Ff.iN40B6gfpxgVASsWwCkLETBRYotkyjC', ''),
 ('9e6c81f5-b0a5-4abb-a9f2-fafae9d677be', 'Palak', 'plksehgal@gmail.com', '$2a$09$rGLlAqsY1far4sF9SiLb3eSPxOvY7o8BHBIQZaXL7iyRnFv9bluI2', ''),
 ('a0ca8aa8-470f-431d-b660-cc02fe691195', 'palak', 'palak@gmail.com', '$2a$09$GlioUcSjud0CRb/l13p/S.QvD4IcM7y2NzUGunWCHWnzPdYYL/22i', ''),
-('b0f766d8-4bb2-4bab-bcd6-5bf0e1e924a6', 'admin', 'testing@gmail.com', '$2a$09$2leZ0oQWgMDwGDPVzBh29u/okCthBmH3d07CRDLxUNPTBNG3EbgkO', '[{\"date\":\"2024-05-20T18:30:00.000Z\",\"id\":\"2075d34a-ad09-480e-a966-42f7c5d10195\",\"events\":[\"e2\"]}]');
+('b0f766d8-4bb2-4bab-bcd6-5bf0e1e924a6', 'admin', 'testing@gmail.com', '$2a$09$2leZ0oQWgMDwGDPVzBh29u/okCthBmH3d07CRDLxUNPTBNG3EbgkO', '');
 
 --
 -- Indexes for dumped tables
