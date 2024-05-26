@@ -13,17 +13,17 @@ import { v4 as uuid } from "uuid";
 const CalenderThree = ({ id }) => {
   const [date, setDate] = useState(new Date());
   const [events, setEvents] = useState([]);
+  const fetchEvents = async () => {
+    const response = await getEvents();
+    if (JSON.parse(response.adminEvents).length == 0) {
+      setEvents([]);
+    } else {
+      setEvents(JSON.parse(response.adminEvents));
+    }
+  };
   useEffect(() => {
-    const fetchEvents = async () => {
-      const response = await getEvents();
-      if (JSON.parse(response.adminEvents).length == 0) {
-        setEvents([]);
-      } else {
-        setEvents(JSON.parse(response.adminEvents));
-      }
-    };
     fetchEvents();
-  }, []);
+  }, [fetchEvents()]);
   const context = useContext(UserContext);
 
   const handleClickDay = async (value) => {
