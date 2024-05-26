@@ -10,10 +10,9 @@ import { addEvents, getEvents } from "../../services/user";
 import { toast } from "react-toastify";
 import { v4 as uuid } from "uuid";
 
-const CalenderThree = () => {
+const CalenderThree = ({ id }) => {
   const [date, setDate] = useState(new Date());
   const [events, setEvents] = useState([]);
-  const uniqueId = uuid();
   useEffect(() => {
     const fetchEvents = async () => {
       const response = await getEvents();
