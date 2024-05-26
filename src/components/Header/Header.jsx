@@ -71,8 +71,8 @@ const Header = () => {
           <div className="relative -mx-4 flex items-center justify-between">
             {/*logo*/}
             <div className="w-[300px] max-w-[360px] px-4 xl:mr-12">
-              <Link
-                href="/"
+              <button
+                onClick={() => router.push("/")}
                 className={`header-logo block w-full ${
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
@@ -84,7 +84,7 @@ const Header = () => {
                   height={30}
                   className="w-full"
                 />
-              </Link>
+              </button>
             </div>
             <div className="flex w-full items-center justify-between px-4">
               <div>
