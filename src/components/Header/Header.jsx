@@ -1,5 +1,5 @@
 "use client";
-import { use, useContext } from "react";
+import { useContext } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -177,7 +177,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {context?.user?.email == "meenusehgal@gmail.com" && (
+                {context?.user?.email == "testing@gmail.com" && (
                   <>
                     <Link
                       href="/admin"

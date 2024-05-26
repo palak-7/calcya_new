@@ -1,7 +1,7 @@
 import SectionTitle from "../Common/SectionTitle";
 import CalenderThree from "../Calender/CalenderThree";
 
-const Video = () => {
+const Video = ({ id }) => {
   return (
     <section className="relative lg:-mt-[5px] mt-9 z-10">
       <div className="lg:transform lg:scale-75 lg:origin-top-left lg:w-[133.33%]">
@@ -13,7 +13,7 @@ const Video = () => {
         />
       </div>
       <div className="mr-4 p-3 flex justify-center">
-        <CalenderThree />
+        <CalenderThree id={id} />
       </div>
     </section>
   );

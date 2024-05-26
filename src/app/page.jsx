@@ -11,14 +11,14 @@ export const metadata = {
 };
 
 export default function page() {
-  // const id = process.env.ADMIN_EMAIL;
+  const id = process.env.ADMIN_EMAIL;
   return (
     <div className=" transform">
       <ScrollUp />
       <Hero />
       <div className="lg:flex lg:justify-around -mt-[80px] bg-white">
         <Features />
-        <Video />
+        <Video id={id} />
       </div>
 
       <AboutSectionOne />

@@ -1,24 +1,22 @@
-// components/MyCalendar.js
 "use client";
+
 import React, { useState, useContext, useEffect } from "react";
 import Calendar from "react-calendar";
 import Swal from "sweetalert2";
 import UserContext from "../../context/UserContext";
 import "react-calendar/dist/Calendar.css";
-import "./MyCalendar.css"; // Import custom CSS file
 import Moment from "react-moment";
 import { addEvents, getEvents } from "../../services/user";
 import { toast } from "react-toastify";
+import { v4 as uuid } from "uuid";
 
-const MyCalendar = () => {
-  const id = "meenusehgal@gmail.com";
+const CalenderThree = () => {
   const [date, setDate] = useState(new Date());
   const [events, setEvents] = useState([]);
-
+  const uniqueId = uuid();
   useEffect(() => {
     const fetchEvents = async () => {
       const response = await getEvents();
-      console.log(response);
       if (JSON.parse(response.adminEvents).length == 0) {
         setEvents([]);
       } else {
@@ -30,7 +28,7 @@ const MyCalendar = () => {
   const context = useContext(UserContext);
 
   const handleClickDay = async (value) => {
-    if (context?.user == id) {
+    if (context?.user?.email == id) {
       const { value: eventName } = await Swal.fire({
         title: "Enter Event Name",
         input: "text",
@@ -50,13 +48,19 @@ const MyCalendar = () => {
         if (existingEvents?.length > 0) {
           const updatedEvents = events?.map((event) => {
             if (event.date.getTime() === value.getTime()) {
-              return { ...event, events: [...event.events, eventName] };
+              return {
+                ...event,
+                events: [...event.events, { id: uuid(), name: eventName }],
+              };
             }
             return event;
           });
           setEvents(updatedEvents);
         } else {
-          setEvents([...events, { date: value, events: [eventName] }]);
+          setEvents([
+            ...events,
+            { date: value, id: uuid(), events: [eventName] },
+          ]);
         }
 
         Swal.fire(
@@ -123,7 +127,13 @@ const MyCalendar = () => {
           {context?.user ? (
             <ul>
               {events?.map((event) => (
-                <SidebarEvent key={event.id} event={event} />
+                <SidebarEvent
+                  key={event.id}
+                  event={event}
+                  id={id}
+                  events={events}
+                  setEvents={setEvents}
+                />
               ))}
             </ul>
           ) : (
@@ -145,15 +155,34 @@ const MyCalendar = () => {
   );
 };
 
-export default MyCalendar;
+export default CalenderThree;
 
-function SidebarEvent({ event }) {
+function SidebarEvent({ event, id, events, setEvents }) {
+  const context = useContext(UserContext);
+  const handleClick = async (e) => {
+    if (context?.user?.email == id) {
+      Swal.fire({
+        title: "Are You Sure!",
+        text: `The Event will be deleted permanently!`,
+        icon: "error",
+        showCancelButton: true,
+        confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          const updatedEvents = events.filter((event) => event.id !== e.id);
+          setEvents(updatedEvents);
+          Swal.fire("Deleted!", "Your event has been deleted.", "success");
+        }
+      });
+    }
+  };
   // const capitalizeFirst = (str) => {
   //   return str.charAt(0).toUpperCase() + str.slice(1);
   // };
   return (
     <li
-      className="mb-1 mt-1 flex justify-center rounded-lg bg-[#da0b54] bg-opacity-50 p-6 text-lg"
+      onClick={() => handleClick(event)}
+      className="hover:cursor-pointer mb-1 mt-1 flex justify-center rounded-lg bg-[#da0b54] bg-opacity-50 p-6 text-lg"
       key={event.id}
     >
       <b className="mr-2">
