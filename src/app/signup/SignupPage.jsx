@@ -68,6 +68,7 @@ const SignupPage = () => {
       return;
     }
     const response = await signup(formData);
+    console.log(response);
     if (response.data.status) {
       toast.success(response.data.message, {
         position: "bottom-left",
