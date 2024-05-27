@@ -31,6 +31,7 @@ export async function POST(request) {
       status: true,
     });
   } catch (error) {
-    return NextResponse.json({ message: "Unable to Sign in", status: false });
+    console.log(error.message);
+    return NextResponse.json({ message: error.message, status: false });
   }
 }
