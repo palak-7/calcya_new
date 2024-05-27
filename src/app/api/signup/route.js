@@ -23,8 +23,8 @@ export async function POST(request) {
       });
     }
     const response = await db.execute(
-      "INSERT INTO user (id, name, email, password) VALUES (?, ?, ?, ?)",
-      [unique_id, name, email, hashedPassword]
+      "INSERT INTO user (id, name, email, password,events) VALUES (?, ?, ?, ?, ?)",
+      [unique_id, name, email, hashedPassword, []]
     );
     return NextResponse.json({
       message: "User Registered Successfully",
