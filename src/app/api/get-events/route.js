@@ -1,15 +1,32 @@
 import { NextResponse } from "next/server";
-import pool from "../../../helper/db";
+import connection from "../../../helper/connection";
 export const dynamic = "force-dynamic";
 
 // export const revalidate = 1; //revalidate api every 1 second
 export async function GET() {
   try {
-    const db = await pool.getConnection();
-    const [adminResult] = await db.execute(
-      "SELECT * from user WHERE email = ?",
-      [process.env.ADMIN_EMAIL]
-    );
+    const [adminResult] = await new Promise((resolve, reject) => {
+      // Perform the database query
+      connection.query(
+        "SELECT * from user WHERE email = ?",
+        [process.env.ADMIN_EMAIL],
+        (err, results, fields) => {
+          if (err) {
+            console.log(err);
+            reject(err); // Reject the promise if there's an error
+          } else {
+            resolve(results); // Resolve the promise with the query results
+          }
+        }
+      );
+    });
+    if (adminResult[0] == undefined) {
+      return NextResponse.json({
+        message: "successful",
+        success: true,
+        adminEvents: [],
+      });
+    }
     const response = NextResponse.json({
       message: "successful",
       success: true,
