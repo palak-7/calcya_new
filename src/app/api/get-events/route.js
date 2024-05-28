@@ -20,7 +20,7 @@ export async function GET() {
         }
       );
     });
-    if (adminResult[0] == undefined) {
+    if (adminResult == undefined) {
       return NextResponse.json({
         message: "successful",
         success: true,
@@ -30,7 +30,7 @@ export async function GET() {
     const response = NextResponse.json({
       message: "successful",
       success: true,
-      adminEvents: adminResult[0].events,
+      adminEvents: adminResult.events,
     });
     return response;
   } catch (error) {
