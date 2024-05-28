@@ -74,6 +74,9 @@ const MainArticle = ({ article_id }) => {
   const fetchArticleById = (id) => {
     return data?.find((article) => article.id === id);
   };
+  const replaceSpacesWithHyphens = (str) => {
+    return str.replace(/ /g, "-");
+  };
   const article = fetchArticleById(article_id);
   const filteredArticles = data.filter(
     (a) => a.heading_id === article.heading_id
@@ -146,7 +149,9 @@ const MainArticle = ({ article_id }) => {
             className="transform transition duration-300 ml-2 mr-2 rounded-lg"
           >
             <Link
-              href={`/resources/insights/${item.id}`}
+              href={`/resources/insights/${replaceSpacesWithHyphens(
+                item.article_id
+              )}/${item.id}`}
               className="hover:text-primary"
             >
               <div className="wow fadeInUp flex" data-wow-delay=".15s">
